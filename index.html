@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive 3D Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    #zoom-in, #zoom-out, #zoom-level-indicator {
+      position: absolute;
+      top: 20px;
+      left: 50%; 
+      transform: translateX(-50%); 
+      z-index: 10; 
+    }
+    #zoom-out {
+      top: 60px; 
+    }
+    #zoom-level-indicator {
+      top: 100px; 
+      width: 100px; 
+      height: 10px; 
+      background: #ddd; 
+    }
+    #zoom-level-bar {
+      height: 100%;
+      background: #666; 
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="zoom-in">+</button>
+  <button id="zoom-out">-</button>
+  <div id="zoom-level-indicator">
+    <div id="zoom-level-bar"></div>
+  </div>
+  <script src="sketch.js"></script>
+</body>
+</html>
